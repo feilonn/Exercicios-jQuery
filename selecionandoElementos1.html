@@ -49,6 +49,25 @@
     </form>
 
     <script>
-        // ...
+        $('ul').addClass('destaque').removeClass('destaque')
+        $('div p span').addClass('destaque')
+
+        //Seletor exclusivos do jQuery
+        $('li:first').css('border', 'dashed 2px royalblue')
+        //Elementos impares
+        $('li:odd').css('border', 'solid 4px red')
+        //Negação do codigo anterior
+        $('li:not(:odd)').css('color', 'black')
+        //Todos que contem a letra r
+        $('li:contains("o")').css('background-color', 'purple')
+        $('li:contains("Carne")').css('border', 'solid 5px orange')
+
+        //Esconde * (tudo) do form
+        $('form *').hide()
+        //Ficar atendo ao espaço: 'form :' entre 'form' e ':' há um espaço
+        $('form :password').show()
+        $('form :radio').show()
+        $('form :file').show()
+
     </script>
 </body>
