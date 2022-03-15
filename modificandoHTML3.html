@@ -20,6 +20,30 @@
             { nome: 'Julia', nota: 9.7 }
         ]
         
-        // ...
+        //Função jQuery que aguarda o carregamento total da pagina antes de executar
+        $(document).ready(function() {
+
+            //Mapeando, onde pessoa representa cada indice do array pessoas
+            /*
+            Criar as <td>, criar a <tr> e dar append com as <td>
+            retorna a <tr>, ou seja, a linha
+            Faz isso em loop com o map, criando varias linhas
+            */
+            const linhas = pessoas.map(pessoa => {
+                const tdNome = $('<td>').append(pessoa.nome)
+                const tdNota = $('<td>').append(pessoa.nota)
+                const tr = $('<tr>').append(tdNome, tdNota)
+                
+                return tr
+            })
+
+            //Cria-se a tabela e da append com o returno do map (linhas da tabela)
+            const tabela = $('<table>').append(linhas) 
+
+            //Por fim, adicionar a tabela na div de id #conteudo
+            $('#conteudo').append(tabela)
+        })
+
+        
     </script>
 </body>
