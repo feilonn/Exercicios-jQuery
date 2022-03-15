@@ -81,6 +81,27 @@
         <p>Cod3r Ensino</p>
     </footer>
     <script>
-        // ...
+        const comBorda = { "border" : "dashed 6px orange" }
+        const semBorda = { "border" : "none" }
+
+        $('.menu').css(comBorda).css(semBorda)
+        $('a[href="#link2"]').css(comBorda)        
+        $('a[href="#link4"]').parentsUntil('html').css(comBorda).css(semBorda)     
+        $('li:last').css(comBorda)
+
+        $('section').parent().css(comBorda)
+        $('section').parents().css(comBorda).css(semBorda) 
+        $('section').siblings().css(comBorda).css(semBorda)
+
+        //Capturando pela DOM e manipulando com jQuery
+
+        const pegaDom = document.getElementsByTagName('section')
+        
+        $(pegaDom).css(comBorda)
+
+        //Filhos diretos
+        $('main').children().css(comBorda)
+
+        $('body').find('a').css(comBorda)
     </script>
 </body>
