@@ -15,6 +15,22 @@
     <div id='div3'>3</div>
     <div id='resultado'></div>
     <script>
-        // ...
+        //Passando multiplos argumentos CSS - Deve-se enviar como objeto
+        $('#div1').css({'font-size': '3em', 'color': 'red'})
+
+        $('#div2').addClass('destaque')
+        $('#div2').removeClass('destaque')
+
+        const testa = $('#div2').hasClass('destaque')
+        $('#div2').addClass('jacare')
+        const jacare = $('#div2').hasClass('jacare')
+
+        $('#resultado').append(`classe destaque: ${testa} <br> classe jacare: ${jacare}`)
+
+        //toggleClass - Se não tiver a classe, adiciona. Se tiver a classe, remove
+        //add
+        $('#div2').toggleClass('destaque')
+        //remove
+        $('#div2').toggleClass('destaque')
     </script>
 </body>
