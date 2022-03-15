@@ -15,6 +15,28 @@
     <div id='conteudo3'></div>
 
     <script>
-        // ...
+        $('#conteudo1').append('<p>1')
+
+        const compras = [
+            $('<li>').append('Sorvete'),
+            $('<li>').append('Carne'),
+            $('<li>').append('Abacate')
+        ]
+
+        $('#conteudo2').append(compras)
+
+        const elementos = [
+            $('<li>').append('Sorvete'),
+            $('<li>').append('Carne'),
+            $('<li>').append('Abacate')
+        ]
+        
+        //prepende() adiciona por ultimo - append() adiciona primeiro
+        const lista = $('<ul><li>Feijão</li></ul>').prepend(elementos)
+        $('#conteudo3').append(lista)
+
+        //Substituem o que estava antes no HTML
+        $('#conteudo3').html('<h1>456')
+        $('#conteudo1').html('<h1>123')
     </script>
 </body>
