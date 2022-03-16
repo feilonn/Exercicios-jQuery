@@ -21,6 +21,12 @@
     <input type="text" placeholder="Digite e Selecione">
     <div id="resultado2">?</div>
     <script>
-        // ...
+        /* SEMPRE QUE QUISER UM EVENTO A PARTIR DE UMA AÇÃO, UTILIZAR ARRAY FUNCTION: $(seletor).evento(e => ação) */
+        const alternaDestaque = () => $('#div1').toggleClass('destaque')
+        $('#div1').hover(alternaDestaque, alternaDestaque)
+
+        //Executa uma unica vez quando o mouse entra
+        $('#div1').one('mouseenter', e => alert("ATENÇÃO!!!"))
+        $('#resultado1').dblclick(e => $('#resultado1').fadeOut(1000).fadeIn(1000))
     </script>
 </body>
